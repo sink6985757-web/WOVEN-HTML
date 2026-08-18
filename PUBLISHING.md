@@ -6,7 +6,7 @@
 
 Repository description：
 
-> Woven Prompt 官方單檔 HTML 的公開發布與維護倉庫；提供 GitHub Pages 線上入口與版本化離線下載，不包含 Mobile 原始碼、APK／AAB 或私人憑證。
+> Woven Prompt 官方 HTML 入口：有連結即可從瀏覽器開啟，搭配 APK 流程核發的個人 License 使用，也可下載單檔離線保存。
 
 建議 Topics：
 
@@ -32,7 +32,7 @@ Woven Prompt HTML 1.2 (25)
 - GitHub Pages 入口 `index.html`
 - `README.md`、`PUBLISHING.md`
 - `LICENSE`、`NOTICE`
-- `.gitignore`、`.nojekyll`
+- `.gitattributes`、`.gitignore`、`.nojekyll`
 
 不可公開的內容：
 
@@ -57,7 +57,7 @@ Woven Prompt HTML 1.2 (25)
    ```powershell
    git init
    git branch -M main
-   git add -- .gitignore .nojekyll LICENSE NOTICE README.md PUBLISHING.md index.html woven-prompt-mobile-1.2-v25.html
+   git add -- .gitattributes .gitignore .nojekyll LICENSE NOTICE README.md PUBLISHING.md index.html woven-prompt-mobile-1.2-v25.html
    git status --short
    git diff --cached --check
    git commit -m "Publish Woven Prompt HTML 1.2 (25)"
@@ -91,7 +91,7 @@ GitHub 完成部署後，請以 Pages 畫面顯示的正式網址為準。專案
 https://<OWNER>.github.io/<REPOSITORY>/
 ```
 
-本倉庫的 `index.html` 只負責把根網址導向目前版本；真正可下載與離線保存的成品仍是版本化的 `woven-prompt-mobile-*.html`。
+本倉庫的 `index.html` 是公開使用者入口，提供產品說明、License 流程、線上開啟與離線下載按鈕；真正可執行與下載保存的成品仍是版本化的 `woven-prompt-mobile-*.html`。
 
 ## 4. 發布新版本
 
@@ -99,7 +99,7 @@ https://<OWNER>.github.io/<REPOSITORY>/
 2. 驗證版本號、WOVEN Backup schema、官方離線 License adapter、公鑰 ID 與公鑰指紋符合當版規格。
 3. 確認 HTML 不含私鑰、owner License、個人 License、Email、API Key 或其他 secret。
 4. 只把新的版本化 HTML 複製到本倉庫，例如 `woven-prompt-mobile-1.2-v26.html`。
-5. 更新 `index.html` 中所有目前版本檔名。
+5. 更新 `index.html` 中所有線上開啟、離線下載按鈕及目前版本文字。
 6. 更新 `README.md` 的版本、檔名、大小與 SHA-256。
 7. 在瀏覽器驗收新版後，再使用明確檔案清單進行 commit 與 push。
 8. GitHub Pages 完成部署後，回讀正式網址並測試根網址、版本檔網址與下載檔案雜湊。
@@ -121,7 +121,7 @@ rg -n -i 'BEGIN .*PRIVATE KEY|sk-[A-Za-z0-9_-]{20,}|AIza[0-9A-Za-z_-]{30,}|gh[po
 
 ### 瀏覽器驗收
 
-- 根網址能導向目前版本。
+- 根網址能顯示公開入口，且線上開啟與離線下載按鈕都指向目前版本。
 - Chrome 與 Edge 能載入首頁、生成器、智囊團、路由、詞庫與設定頁。
 - License 缺少、有效與無效狀態符合預期；測試時不得使用或提交買家個人 License。
 - WOVEN Backup v2 能匯出並於同版重新匯入；正式跨 APK／HTML 相容性仍以實際 APK 匯出檔驗收。
@@ -144,7 +144,7 @@ git ls-files
 若新版 Pages 發生問題：
 
 1. 保留問題版本以供調查，不要重寫 Git 歷史。
-2. 把 `index.html` 的目前版本檔名改回最後一個已驗證版本。
+2. 把 `index.html` 的線上開啟、離線下載按鈕與版本文字改回最後一個已驗證版本。
 3. 更新 `README.md` 的目前版本資訊。
 4. 提交一個清楚的 rollback commit，推送後重新回讀 Pages。
 

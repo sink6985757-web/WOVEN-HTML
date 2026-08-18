@@ -1,54 +1,70 @@
 # Woven Prompt HTML
 
-Woven Prompt HTML 是 **Woven Prompt 官方單檔 HTML 作品的公開發布與維護倉庫**。這個倉庫只保存可直接在瀏覽器執行或下載保存的 HTML 成品，以及公開上架所需的說明與授權文件。
+**一個固定連結，讓你不用安裝 App，也能從電腦或手機瀏覽器開啟 Woven Prompt。**
 
-Mobile App 原始碼、APK／AAB、建置工具、簽章私鑰、owner License 與任何使用者個人 License 都不屬於本倉庫，也不會隨 HTML 一起公開。
+[🌐 立即開啟 Woven Prompt HTML](https://sink6985757-web.github.io/WOVEN-HTML/)　[⬇️ 下載目前離線單檔](https://sink6985757-web.github.io/WOVEN-HTML/woven-prompt-mobile-1.2-v25.html)
+
+這是 Woven Prompt 官方 HTML 的公開入口。只要記住同一個網址，就能回到目前推薦版本；你也可以把單檔 HTML 下載到自己的裝置，在需要時離線開啟。
+
+> 入口公開給所有人，但正式離線版仍需匯入透過 Woven Prompt APK 流程核發給你的個人 License。請勿公開或轉傳個人 License。
+
+## 為什麼這個入口更方便
+
+- **不用另外安裝**：開啟連結就能進入，適合臨時換電腦、平板或手機使用。
+- **固定網址、持續更新**：之後版本更新仍從同一個首頁進入，不必每次尋找新的下載位置。
+- **線上與離線都可以**：平常直接從 GitHub Pages 開啟，也能下載成單一 HTML 保存。
+- **延續 APK 的使用權**：從 APK 內完成官方離線 HTML 流程並取得個人 License 後，可在 HTML 中匯入驗證。
+- **資料由自己掌握**：Prompt、詞庫、設定與 License 主要保存在目前瀏覽器本機；需要換裝置時，可使用 WOVEN Backup v2 搬移資料。
+
+## 第一次使用
+
+1. 在 Woven Prompt APK 內進入官方離線 HTML 項目，依畫面完成購買／申請流程。
+2. 取得作者核發給你的個人 License 檔案。
+3. 開啟 [Woven Prompt HTML 公開入口](https://sink6985757-web.github.io/WOVEN-HTML/)，按下「立即開啟 Woven Prompt」。
+4. 在 HTML 畫面中匯入個人 License；驗證成功後即可開始使用。
+
+同一瀏覽器會在本機保存 License 與使用資料。若更換瀏覽器、切換網站來源、使用無痕模式或清除網站資料，可能需要重新匯入 License 與備份。
+
+## 你可以用它做什麼
+
+- 快速版／進階版 Prompt 組合
+- 智囊團角色協作與收斂
+- Knowledge Master 路由設定
+- 提示詞庫、搜尋、最愛與內容版本
+- 日間、夜間、護眼與跟隨系統顯示
+- WOVEN Backup v2 完整備份與還原
+- 將完成的 Prompt 複製或帶往 ChatGPT、Gemini、Claude、DeepSeek
+
+Woven Prompt 負責整理與組合 Prompt，**不內嵌 AI API Key，也不會自動替你呼叫付費 AI API**。只有當你主動選擇外部 AI 目的地時，瀏覽器才會開啟對應網站。
+
+## 隱私與使用提醒
+
+- Prompt、設定、詞庫與個人 License 主要儲存在目前瀏覽器本機。
+- 請勿把個人 License、私人 Prompt 或完整備份貼到 GitHub Issues。
+- Chrome／Edge 的語音辨識可能由瀏覽器或系統服務透過網路處理；不使用語音時，所有核心流程仍可用鍵盤完成。
+- 換裝置或清除瀏覽器資料前，請先匯出 WOVEN Backup v2 完整備份。
+
+## 建議環境
+
+建議使用最新版 Chrome 或 Edge。手機與桌面瀏覽器都能開啟，但畫面、語音支援、下載行為與本機儲存空間會依瀏覽器而異。
 
 ## 目前版本
 
 | 項目 | 內容 |
 | --- | --- |
 | 版本 | Woven Prompt 1.2（25） |
-| 單檔成品 | [`woven-prompt-mobile-1.2-v25.html`](woven-prompt-mobile-1.2-v25.html) |
+| HTML | [`woven-prompt-mobile-1.2-v25.html`](woven-prompt-mobile-1.2-v25.html) |
 | 檔案大小 | 704,275 bytes |
 | SHA-256 | `FCF44F0F46E30947994C0F4D433B24C8AE5E2E0F30798CF62DC2335D02A34FA9` |
 
-## 如何使用
-
-- 線上使用：啟用 GitHub Pages 後，從 Pages 顯示的網站網址進入；根目錄的 `index.html` 會開啟目前維護版本。
-- 離線使用：下載版本化的 HTML 檔，保存在自己的電腦後，以最新版 Chrome 或 Edge 開啟。
-- 更新前備份：若已在瀏覽器保存 Prompt、設定或詞庫，請先從系統設定匯出 **WOVEN Backup v2** 完整備份。
-
-不同瀏覽器、不同網域與本機 `file://` 開啟方式會使用不同的瀏覽器儲存空間。更換使用位置時，請以完整備份搬移資料，不要假設舊資料會自動跟過去。
-
-## 這個 HTML 做什麼
-
-Woven Prompt 是本機優先的 Prompt 編輯與組合工具，提供生成器、智囊團、Knowledge Master 路由、提示詞庫、最愛、主題外觀與備份還原等功能。
-
-- HTML 不內嵌 AI API Key，也不會代替使用者呼叫付費 AI API。
-- Prompt 的組合與保存主要在目前瀏覽器內完成。
-- 只有在使用者主動選擇傳送目的地時，才會開啟 ChatGPT、Gemini、Claude 或 DeepSeek 等外部網站。
-- Chrome／Edge 的語音輸入屬於瀏覽器漸進功能；語音辨識可能由瀏覽器或系統服務透過網路處理。
-- 官方離線版的驗證資料只包含公開驗證公鑰；簽章私鑰與個人 License 不包含在 HTML 或本倉庫內。
-
-## 維護原則
-
-本倉庫是「發佈成品倉庫」，不是 Mobile 原始碼鏡像。
-
-1. 新功能與修正先在獨立的 Mobile 專案完成建置與驗證。
-2. 每次只帶入通過驗證的版本化單檔 HTML，不複製 Mobile 專案結構。
-3. 不直接手動修改 HTML 內壓縮過的 JavaScript bundle；有功能問題時回到來源專案修正後重新建置。
-4. 保留舊版檔案以便回退，並更新本頁的版本、大小與 SHA-256。
-5. 每次公開前執行敏感資訊、外部資源、License 邊界與瀏覽器功能檢查。
-
-完整首次上架、版本更新、驗證與回退流程請見 [`PUBLISHING.md`](PUBLISHING.md)。
-
 ## 問題回報
 
-可透過 GitHub Issues 回報可重現的 HTML 問題。請附上版本、瀏覽器版本、作業系統與重現步驟；不要貼出私人 Prompt、完整備份、訂單資料、Email、API Key 或個人 License。
+若遇到問題，請在 GitHub Issues 提供 HTML 版本、瀏覽器版本、作業系統與重現步驟。請先移除私人 Prompt、Email、訂單資料、API Key、完整備份及個人 License。
+
+開發者與版本維護流程請見 [`PUBLISHING.md`](PUBLISHING.md)。
 
 ## License
 
-本倉庫所發布的程式成品依 [Apache License 2.0](LICENSE) 授權；第三方元件仍適用各自的授權條款。HTML 內的離線 License 驗證用於官方成品與交付服務的識別，不改寫 Apache-2.0 所授予的程式使用、修改與再散布權利。
+本倉庫發布的程式成品依 [Apache License 2.0](LICENSE) 授權；第三方元件仍適用各自的授權條款。HTML 內的個人 License 驗證用於官方成品與交付服務識別，不改寫 Apache-2.0 所授予的程式使用、修改與再散布權利。
 
 `WOVEN`、`Woven Prompt`、專案圖示與「官方版本」識別不因 Apache-2.0 自動授予商標或官方背書權利，詳見 [`NOTICE`](NOTICE)。
