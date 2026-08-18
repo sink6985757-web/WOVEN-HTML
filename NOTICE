@@ -1,0 +1,15 @@
+Woven Prompt HTML
+Copyright 2026 sink6985757-web
+
+This repository distributes the official standalone HTML artifact and its
+public maintenance documentation. It does not include the Mobile source tree,
+APK or AAB packages, signing private keys, owner licenses, or buyer licenses.
+
+The distributed program code is licensed under the Apache License, Version 2.0.
+Third-party components remain subject to their respective license terms.
+
+The Apache-2.0 license does not grant permission to use project trademarks,
+claim official distribution status, access hosted services, or use the owner's
+license-issuance services.
+
+This NOTICE file is informational and does not modify Apache License 2.0.
