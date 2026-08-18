@@ -1,0 +1,32 @@
+# Operating-system files
+desktop.ini
+Thumbs.db
+.DS_Store
+
+# Mobile/source/build trees are outside this artifact-only repository
+AI-WOVEN-Prompt-Mobile/
+app/
+build-artifacts/
+outputs/
+owner-tools/
+node_modules/
+
+# Native packages and signing material
+*.apk
+*.aab
+*.jks
+*.keystore
+*.p12
+*.pfx
+*.pem
+
+# Secrets, personal licenses, and user data
+.env
+.env.*
+*.license.json
+*.woven.json
+
+# Local scratch files
+*.bak
+*.tmp
+*.log
