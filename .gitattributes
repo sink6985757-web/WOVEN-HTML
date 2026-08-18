@@ -1,0 +1,2 @@
+# Preserve versioned standalone artifacts byte-for-byte across platforms.
+woven-prompt-mobile-*.html -text
