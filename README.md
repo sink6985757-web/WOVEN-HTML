@@ -2,7 +2,7 @@
 
 **一個固定連結，讓你不用安裝 App，也能從電腦或手機瀏覽器開啟 Woven Prompt。**
 
-[🌐 立即開啟 Woven Prompt HTML](https://sink6985757-web.github.io/WOVEN-HTML/)　[⬇️ 下載目前離線單檔](https://sink6985757-web.github.io/WOVEN-HTML/woven-prompt-mobile-1.2-v25.html)
+[🌐 立即開啟 Woven Prompt HTML](https://sink6985757-web.github.io/WOVEN-HTML/)　[⬇️ 下載目前離線單檔](https://sink6985757-web.github.io/WOVEN-HTML/woven-prompt-mobile-1.2-v28.html)
 
 這是 Woven Prompt 官方 HTML 的公開入口。只要記住同一個網址，就能回到目前推薦版本；你也可以把單檔 HTML 下載到自己的裝置，在需要時離線開啟。
 
@@ -13,13 +13,13 @@
 - **不用另外安裝**：開啟連結就能進入，適合臨時換電腦、平板或手機使用。
 - **固定網址、持續更新**：之後版本更新仍從同一個首頁進入，不必每次尋找新的下載位置。
 - **線上與離線都可以**：平常直接從 GitHub Pages 開啟，也能下載成單一 HTML 保存。
-- **延續 APK 的使用權**：從 APK 內完成官方離線 HTML 流程並取得個人 License 後，可在 HTML 中匯入驗證。
-- **資料由自己掌握**：Prompt、詞庫、設定與 License 主要保存在目前瀏覽器本機；需要換裝置時，可使用 WOVEN Backup v2 搬移資料。
+- **延續 App 的使用權**：在 Android App 完成官方離線 HTML 購買後，後端向 Google Play 驗證並核發個人 License，可在 HTML 中匯入驗證。
+- **資料由自己掌握**：Prompt、詞庫、設定與 License 主要保存在目前瀏覽器本機；需要換裝置時，可使用 WOVEN Backup v3 搬移資料，新版也能讀取 v2／v1 備份。
 
 ## 第一次使用
 
-1. 在 Woven Prompt APK 內進入官方離線 HTML 項目，依畫面完成購買／申請流程。
-2. 取得作者核發給你的個人 License 檔案。
+1. 在 Woven Prompt Android App 內進入「官方離線 HTML」，透過 Google Play 完成一次性購買。
+2. 後端驗證成功後，在 App 內匯出不含 Email 或訂單明文的個人 License 檔案。
 3. 開啟 [Woven Prompt HTML 公開入口](https://sink6985757-web.github.io/WOVEN-HTML/)，按下「立即開啟 Woven Prompt」。
 4. 在 HTML 畫面中匯入個人 License；驗證成功後即可開始使用。
 
@@ -32,7 +32,7 @@
 - Knowledge Master 路由設定
 - 提示詞庫、搜尋、最愛與內容版本
 - 日間、夜間、護眼與跟隨系統顯示
-- WOVEN Backup v2 完整備份與還原
+- WOVEN Backup v3 完整備份與還原（相容 v2／v1）
 - 將完成的 Prompt 複製或帶往 ChatGPT、Gemini、Claude、DeepSeek
 
 Woven Prompt 負責整理與組合 Prompt，**不內嵌 AI API Key，也不會自動替你呼叫付費 AI API**。只有當你主動選擇外部 AI 目的地時，瀏覽器才會開啟對應網站。
@@ -42,7 +42,7 @@ Woven Prompt 負責整理與組合 Prompt，**不內嵌 AI API Key，也不會�
 - Prompt、設定、詞庫與個人 License 主要儲存在目前瀏覽器本機。
 - 請勿把個人 License、私人 Prompt 或完整備份貼到 GitHub Issues。
 - Chrome／Edge 的語音辨識可能由瀏覽器或系統服務透過網路處理；不使用語音時，所有核心流程仍可用鍵盤完成。
-- 換裝置或清除瀏覽器資料前，請先匯出 WOVEN Backup v2 完整備份。
+- 換裝置或清除瀏覽器資料前，請先匯出 WOVEN Backup v3 完整備份。
 
 ## 建議環境
 
@@ -52,10 +52,10 @@ Woven Prompt 負責整理與組合 Prompt，**不內嵌 AI API Key，也不會�
 
 | 項目 | 內容 |
 | --- | --- |
-| 版本 | Woven Prompt 1.2（25） |
-| HTML | [`woven-prompt-mobile-1.2-v25.html`](woven-prompt-mobile-1.2-v25.html) |
-| 檔案大小 | 704,275 bytes |
-| SHA-256 | `FCF44F0F46E30947994C0F4D433B24C8AE5E2E0F30798CF62DC2335D02A34FA9` |
+| 版本 | Woven Prompt 1.2（28） |
+| HTML | [`woven-prompt-mobile-1.2-v28.html`](woven-prompt-mobile-1.2-v28.html) |
+| 檔案大小 | 727,054 bytes |
+| SHA-256 | `77FC9EDAF66E04E76BD6400FCC9123ECA1B4940291215B7CB2BAFBAB71D31DAD` |
 
 ## 問題回報
 
