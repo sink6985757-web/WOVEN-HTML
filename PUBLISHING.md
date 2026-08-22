@@ -14,15 +14,15 @@ Repository description：
 woven-prompt  prompt-tool  offline-html  local-first  github-pages
 ```
 
-首版 Release 標題：
+目前 Release 標題：
 
 ```text
-Woven Prompt HTML 1.2 (25)
+Woven Prompt HTML 1.2 (28)
 ```
 
-首版 Release 摘要：
+目前 Release 摘要：
 
-> Woven Prompt 1.2（25）官方單檔 HTML。可由 GitHub Pages 線上開啟，也可下載成單一 HTML 離線保存。本發佈只包含 HTML 成品與公開維護文件，不包含 Mobile 原始碼、APK／AAB、簽章私鑰或個人 License。下載後可用 SHA-256 `FCF44F0F46E30947994C0F4D433B24C8AE5E2E0F30798CF62DC2335D02A34FA9` 驗證檔案。
+> Woven Prompt 1.2（28）官方單檔 HTML。可由 GitHub Pages 線上開啟，也可下載成單一 HTML 離線保存。本發佈只包含 HTML 成品與公開維護文件，不包含 Mobile 原始碼、APK／AAB、簽章私鑰或個人 License。下載後可用 SHA-256 `77FC9EDAF66E04E76BD6400FCC9123ECA1B4940291215B7CB2BAFBAB71D31DAD` 驗證檔案。
 
 ## 1. 公開範圍
 
@@ -49,7 +49,7 @@ Woven Prompt HTML 1.2 (25)
    ```powershell
    Set-Location -LiteralPath 'G:\我的雲端硬碟\WOVEN HTML'
    Get-ChildItem -Force
-   Get-FileHash -Algorithm SHA256 -LiteralPath '.\woven-prompt-mobile-1.2-v25.html'
+   Get-FileHash -Algorithm SHA256 -LiteralPath '.\woven-prompt-mobile-1.2-v28.html'
    ```
 
 3. 初始化 Git，使用明確 allowlist 加入檔案：
@@ -57,10 +57,10 @@ Woven Prompt HTML 1.2 (25)
    ```powershell
    git init
    git branch -M main
-   git add -- .gitattributes .gitignore .nojekyll LICENSE NOTICE README.md PUBLISHING.md index.html woven-prompt-mobile-1.2-v25.html
+   git add -- .gitattributes .gitignore .nojekyll LICENSE NOTICE README.md PUBLISHING.md index.html woven-prompt-mobile-1.2-v28.html
    git status --short
    git diff --cached --check
-   git commit -m "Publish Woven Prompt HTML 1.2 (25)"
+   git commit -m "Publish Woven Prompt HTML 1.2 (28)"
    ```
 
 4. 把下列 `<OWNER>` 與 `<REPOSITORY>` 換成實際值，再連接既有空白倉庫：
@@ -96,7 +96,7 @@ https://<OWNER>.github.io/<REPOSITORY>/
 ## 4. 發布新版本
 
 1. 在獨立 Mobile 專案完成來源修改、測試與 standalone HTML 建置。
-2. 驗證版本號、WOVEN Backup schema、官方離線 License adapter、公鑰 ID 與公鑰指紋符合當版規格。
+2. 驗證版本號、WOVEN Backup schema、官方離線 License adapter、兩套公鑰 Authority 與公鑰指紋符合當版規格。
 3. 確認 HTML 不含私鑰、owner License、個人 License、Email、API Key 或其他 secret。
 4. 只把新的版本化 HTML 複製到本倉庫，例如 `woven-prompt-mobile-1.2-v26.html`。
 5. 更新 `index.html` 中所有線上開啟、離線下載按鈕及目前版本文字。
@@ -111,7 +111,7 @@ https://<OWNER>.github.io/<REPOSITORY>/
 ### 成品與敏感資訊
 
 ```powershell
-$html = '.\woven-prompt-mobile-1.2-v25.html'
+$html = '.\woven-prompt-mobile-1.2-v28.html'
 Get-Item -LiteralPath $html | Select-Object Name, Length, LastWriteTime
 Get-FileHash -Algorithm SHA256 -LiteralPath $html
 rg -n -i 'BEGIN .*PRIVATE KEY|sk-[A-Za-z0-9_-]{20,}|AIza[0-9A-Za-z_-]{30,}|gh[pousr]_[A-Za-z0-9]{20,}|Bearer\s+[A-Za-z0-9._~+/-]{20,}' -- $html
@@ -124,7 +124,7 @@ rg -n -i 'BEGIN .*PRIVATE KEY|sk-[A-Za-z0-9_-]{20,}|AIza[0-9A-Za-z_-]{30,}|gh[po
 - 根網址能顯示公開入口，且線上開啟與離線下載按鈕都指向目前版本。
 - Chrome 與 Edge 能載入首頁、生成器、智囊團、路由、詞庫與設定頁。
 - License 缺少、有效與無效狀態符合預期；測試時不得使用或提交買家個人 License。
-- WOVEN Backup v2 能匯出並於同版重新匯入；正式跨 APK／HTML 相容性仍以實際 APK 匯出檔驗收。
+- WOVEN Backup v3 能匯出並於同版重新匯入，也能讀取 v2／v1；正式跨 APK／HTML 相容性仍以實際 APK 匯出檔驗收。
 - Prompt 生成、保存、搜尋、最愛、初始化與顯示模式可正常使用。
 - 點選外部 AI 目的地前會保留 Prompt，且只有使用者主動操作才開啟外部網站。
 - 語音不可用時能正常回退鍵盤輸入。
@@ -159,7 +159,7 @@ git ls-files
 - SHA-256
 - 主要變更
 - 已知限制
-- 是否通過實際 APK → HTML 的 WOVEN Backup v2 相容性驗收
+- 是否通過實際 APK → HTML 的 WOVEN Backup v2／v1 相容性驗收
 
 Release 是版本下載與追溯入口；GitHub Pages 則維持指向目前推薦版本。
 
