@@ -30,7 +30,8 @@ Woven Prompt HTML 1.2 (28)
 
 - 版本化的 `woven-prompt-mobile-*.html` 成品
 - GitHub Pages 入口 `index.html`
-- `README.md`、`PUBLISHING.md`
+- 本倉庫的 `README.md`、`PUBLISHING.md`、`AGENTS.md`、`CHANGELOG.md`、`handoff.md`
+- `.agents/project-lifecycle.json`（只含公開 repository identity、authority SHA 與相對路徑）
 - `LICENSE`、`NOTICE`
 - `.gitattributes`、`.gitignore`、`.nojekyll`
 
@@ -41,64 +42,32 @@ Woven Prompt HTML 1.2 (28)
 - owner License、買家 License、訂單、Email、個人備份或真實 Prompt
 - 未通過驗證的測試產物
 
-## 2. 第一次建立公開倉庫
+## 2. 既有倉庫開工
 
-1. 在 GitHub 建立一個空白的 **Public** repository，例如 `WOVEN-HTML`。先不要勾選自動建立 README、License 或 `.gitignore`，避免與本資料夾內容衝突。
-2. 在 PowerShell 進入本資料夾並再次確認清單只有預定公開檔案：
+GitHub repository 已存在：`sink6985757-web/WOVEN-HTML`，default branch 為 `main`。只在本 repository root 操作，不重新 init 或改 remote。
 
-   ```powershell
-   Set-Location -LiteralPath 'G:\我的雲端硬碟\WOVEN HTML'
-   Get-ChildItem -Force
-   Get-FileHash -Algorithm SHA256 -LiteralPath '.\woven-prompt-mobile-1.2-v28.html'
-   ```
-
-3. 初始化 Git，使用明確 allowlist 加入檔案：
-
-   ```powershell
-   git init
-   git branch -M main
-   git add -- .gitattributes .gitignore .nojekyll LICENSE NOTICE README.md PUBLISHING.md index.html woven-prompt-mobile-1.2-v28.html
-   git status --short
-   git diff --cached --check
-   git commit -m "Publish Woven Prompt HTML 1.2 (28)"
-   ```
-
-4. 把下列 `<OWNER>` 與 `<REPOSITORY>` 換成實際值，再連接既有空白倉庫：
-
-   ```powershell
-   git remote add origin https://github.com/<OWNER>/<REPOSITORY>.git
-   git push -u origin main
-   ```
-
-5. 推送後在 GitHub 回讀檔案清單，確認沒有 Mobile 原始碼、私鑰、個人 License、APK 或 AAB。
-
-建立 repository、公開可見性與第一次 push 都會改變外部狀態，應由倉庫擁有者確認後操作。
-
-## 3. 啟用 GitHub Pages
-
-在 repository 內依序開啟：
-
-1. **Settings**
-2. 左側 **Pages**
-3. **Build and deployment** → **Source** 選擇 **Deploy from a branch**
-4. Branch 選擇 `main`
-5. Folder 選擇 `/(root)`
-6. 按 **Save**
-
-GitHub 完成部署後，請以 Pages 畫面顯示的正式網址為準。專案型網站通常會是：
-
-```text
-https://<OWNER>.github.io/<REPOSITORY>/
+```powershell
+git rev-parse --show-toplevel
+git remote get-url origin
+git fetch origin main
+git status --short --branch
+git log --oneline --left-right HEAD...origin/main
 ```
 
-本倉庫的 `index.html` 是公開使用者入口，提供產品說明、License 流程、線上開啟與離線下載按鈕；真正可執行與下載保存的成品仍是版本化的 `woven-prompt-mobile-*.html`。
+只有乾淨且單純落後時，才在已確認同步工作內執行 `git merge --ff-only origin/main`。治理文件由本 repo 維護，不從 Mobile 複製 AGENTS 或 handoff。
+
+## 3. 既有 GitHub Pages
+
+Pages 已啟用，來源是 `main` 的 `/(root)`，正式入口為 [Woven Prompt HTML](https://sink6985757-web.github.io/WOVEN-HTML/)。推送 main 可能觸發 Pages build；每次同步後回讀 build 狀態、根入口連結與目前 HTML 下載的 SHA-256。GitHub commit 與 Pages 部署完成是兩項驗收。
+
+本輪只更新文件與同步既有 v28 成品，不變更 Pages 設定、權限或建立 Release。
 
 ## 4. 發布新版本
 
 1. 在獨立 Mobile 專案完成來源修改、測試與 standalone HTML 建置。
 2. 驗證版本號、WOVEN Backup schema、官方離線 License adapter、兩套公鑰 Authority 與公鑰指紋符合當版規格。
 3. 確認 HTML 不含私鑰、owner License、個人 License、Email、API Key 或其他 secret。
-4. 只把新的版本化 HTML 複製到本倉庫，例如 `woven-prompt-mobile-1.2-v26.html`。
+4. 只把新的版本化 HTML 複製到本倉庫，使用下一個已驗證版本的唯一檔名。
 5. 更新 `index.html` 中所有線上開啟、離線下載按鈕及目前版本文字。
 6. 更新 `README.md` 的版本、檔名、大小與 SHA-256。
 7. 在瀏覽器驗收新版後，再使用明確檔案清單進行 commit 與 push。

@@ -1,5 +1,18 @@
 # Woven Prompt HTML
 
+## 2026-09-05 更新
+
+Drive 公開成品 checkout 已快轉到 GitHub 的 1.2（28）；補齊 AGENTS、CHANGELOG、handoff 與 manual manifest，維持公開 HTML 成品邊界。
+
+## 開工與收工
+
+1. 首次使用或治理缺件才執行 `initial`；既有專案平日直接 `startup`。
+2. 開工讀取 [manifest](.agents/project-lifecycle.json)、[AGENTS.md](AGENTS.md)、[handoff.md](handoff.md)，確認 Git root 與 `origin`，fetch 後分別比較目前 upstream 和 default branch `main`。fetch 不會同步工作樹。
+3. 在已確認範圍內修改與驗證。未提交內容、版本分叉與 unknown untracked 先保全、辨識，不直接覆蓋或整包 stage。
+4. 收工更新 [CHANGELOG.md](CHANGELOG.md) 與 handoff；使用 `manual` checkpoint，沿用當次已確認工作單的 commit／push 授權。只有遠端 SHA 回讀一致才算 GitHub 同步完成；Drive 同步另行回讀。
+
+固定 authority commit、專案 identity 與窄範圍文件 allowlist 見 manifest。一般開工不執行安裝、部署或外部帳號動作；既有 tag／Release、封存來源與私人設定依各自邊界維持。
+
 **一個固定連結，讓你不用安裝 App，也能從電腦或手機瀏覽器開啟 Woven Prompt。**
 
 [🌐 立即開啟 Woven Prompt HTML](https://sink6985757-web.github.io/WOVEN-HTML/)　[⬇️ 下載目前離線單檔](https://sink6985757-web.github.io/WOVEN-HTML/woven-prompt-mobile-1.2-v28.html)
