@@ -1,5 +1,19 @@
 # Changelog
 
+## [2.1.0 (44) shutdown] - 2026-09-06
+
+### Changed
+- 補齊本次公開版本的收工紀錄與遠端部署證據；HTML、首頁、README 與 AGENTS 內容維持本次已發布版本。
+
+### Validation
+- 2026-09-06T21:01:34+08:00 回讀：`main` 成果 `b8c9a3a17200098d7ada35471e15bfd2859dcb26`、同一 Pages build `built`；正式首頁與 GitHub committed bytes 相符，HTML 下載 SHA-256 `03BD1203B578A394B6DE24842B30A7C05E6C099E3A2E2E7BEB1AB2ED4531F91D`。
+- 本次只更新文件，驗證文件差異與遠端 readback；227/227 功能、4/4 版本、20 項 Web UI 等為本日發布階段證據，本次收工未重跑。
+
+### Delivery
+- Checkpoint policy：`manual`；沿用 `WO-WOVEN-HTML-V44-20260906` 當次 scoped commit／push 授權，只同步 CHANGELOG／handoff。
+- 發布成果：VERIFIED `b8c9a3a17200098d7ada35471e15bfd2859dcb26`；收工文件 checkpoint 以包含本節的提交為準，推送後核對 remote SHA 與 Pages。
+- 下次只需先回讀目前 main／Pages 與 V44 下載；實機 APK 備份往返及購買維持獨立待驗。回復時以新 commit 將入口切回保留的 v28。
+
 ## [2.1.0 (44)] - 2026-09-06
 
 - `WO-WOVEN-HTML-V44-20260906`：依使用者本次授權，把最新 App 的相符來源轉為 HTML，更新既有 GitHub main／官方 Pages 首頁。
