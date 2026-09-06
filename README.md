@@ -1,8 +1,8 @@
 # Woven Prompt HTML
 
-## 2026-09-05 更新
+## 2026-09-06 更新
 
-Drive 公開成品 checkout 已快轉到 GitHub 的 1.2（28）；補齊 AGENTS、CHANGELOG、handoff 與 manual manifest，維持公開 HTML 成品邊界。
+目前版本為 **2.1.0（44）**，由最新 App 的相符來源建立：新增繁體中文／English 切換、四區進階生成流程與共用使用說明。既有永久 License 繼續有效；新版與舊版檔案分開保存。
 
 ## 開工與收工
 
@@ -15,7 +15,7 @@ Drive 公開成品 checkout 已快轉到 GitHub 的 1.2（28）；補齊 AGENTS�
 
 **一個固定連結，讓你不用安裝 App，也能從電腦或手機瀏覽器開啟 Woven Prompt。**
 
-[🌐 立即開啟 Woven Prompt HTML](https://sink6985757-web.github.io/WOVEN-HTML/)　[⬇️ 下載目前離線單檔](https://sink6985757-web.github.io/WOVEN-HTML/woven-prompt-mobile-1.2-v28.html)
+[🌐 立即開啟 Woven Prompt HTML](https://sink6985757-web.github.io/WOVEN-HTML/)　[⬇️ 下載目前離線單檔](https://sink6985757-web.github.io/WOVEN-HTML/woven-prompt-mobile-2.1.0-v44.html)
 
 這是 Woven Prompt 官方 HTML 的公開入口。只要記住同一個網址，就能回到目前推薦版本；你也可以把單檔 HTML 下載到自己的裝置，在需要時離線開啟。
 
@@ -26,13 +26,13 @@ Drive 公開成品 checkout 已快轉到 GitHub 的 1.2（28）；補齊 AGENTS�
 - **不用另外安裝**：開啟連結就能進入，適合臨時換電腦、平板或手機使用。
 - **固定網址、持續更新**：之後版本更新仍從同一個首頁進入，不必每次尋找新的下載位置。
 - **線上與離線都可以**：平常直接從 GitHub Pages 開啟，也能下載成單一 HTML 保存。
-- **延續 App 的使用權**：在 Android App 完成官方離線 HTML 購買後，後端向 Google Play 驗證並核發個人 License，可在 HTML 中匯入驗證。
+- **延續 App 的使用權**：先前取得的官方永久 License 可繼續匯入新版 HTML，不需要因版本更新再次購買。
 - **資料由自己掌握**：Prompt、詞庫、設定與 License 主要保存在目前瀏覽器本機；需要換裝置時，可使用 WOVEN Backup v3 搬移資料，新版也能讀取 v2／v1 備份。
 
 ## 第一次使用
 
-1. 在 Woven Prompt Android App 內進入「官方離線 HTML」，透過 Google Play 完成一次性購買。
-2. 後端驗證成功後，在 App 內匯出不含 Email 或訂單明文的個人 License 檔案。
+1. 準備先前透過官方流程取得的個人 License 檔案。新版 Android App 目前未提供離線 HTML 購買入口。
+2. 若已有使用資料，先從舊版匯出 WOVEN Backup，保留原始 License 與備份檔。
 3. 開啟 [Woven Prompt HTML 公開入口](https://sink6985757-web.github.io/WOVEN-HTML/)，按下「立即開啟 Woven Prompt」。
 4. 在 HTML 畫面中匯入個人 License；驗證成功後即可開始使用。
 
@@ -40,7 +40,8 @@ Drive 公開成品 checkout 已快轉到 GitHub 的 1.2（28）；補齊 AGENTS�
 
 ## 你可以用它做什麼
 
-- 快速版／進階版 Prompt 組合
+- 繁體中文／English 介面切換，重新開啟後沿用，保留使用者原文
+- 快速版與四區進階 Prompt 組合：主題、工作深度與背景、輸出形式、專家模組
 - 智囊團角色協作與收斂
 - Knowledge Master 路由設定
 - 提示詞庫、搜尋、最愛與內容版本
@@ -65,10 +66,16 @@ Woven Prompt 負責整理與組合 Prompt，**不內嵌 AI API Key，也不會�
 
 | 項目 | 內容 |
 | --- | --- |
-| 版本 | Woven Prompt 1.2（28） |
-| HTML | [`woven-prompt-mobile-1.2-v28.html`](woven-prompt-mobile-1.2-v28.html) |
-| 檔案大小 | 727,054 bytes |
-| SHA-256 | `77FC9EDAF66E04E76BD6400FCC9123ECA1B4940291215B7CB2BAFBAB71D31DAD` |
+| 版本 | Woven Prompt 2.1.0（44） |
+| HTML | [`woven-prompt-mobile-2.1.0-v44.html`](woven-prompt-mobile-2.1.0-v44.html) |
+| 檔案大小 | 1,044,506 bytes |
+| SHA-256 | `03BD1203B578A394B6DE24842B30A7C05E6C099E3A2E2E7BEB1AB2ED4531F91D` |
+
+## 版本驗證與限制
+
+本版通過 TypeScript、227 項功能測試與 4 項版本測試；發佈前另驗證 Chrome／Edge、License 狀態、離線啟動、雙語介面、資料保存及瀏覽器備份匯出／重新匯入。公開 HTML 只含編譯成品與公鑰，沒有 Mobile 私有原始碼、APK／AAB 或個人 License。
+
+Android 實機升級、實際 APK 匯出備份轉入 HTML、Play 測試購買仍是獨立待驗項目。Web 備份測試不等同實機 APK 往返；原生廣告與購買不在 HTML 執行。
 
 ## 問題回報
 

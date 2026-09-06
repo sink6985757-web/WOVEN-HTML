@@ -14,15 +14,15 @@ Repository description：
 woven-prompt  prompt-tool  offline-html  local-first  github-pages
 ```
 
-目前 Release 標題：
+目前 HTML 版本（本次未新增 GitHub Release）：
 
 ```text
-Woven Prompt HTML 1.2 (28)
+Woven Prompt HTML 2.1.0 (44)
 ```
 
-目前 Release 摘要：
+目前版本摘要：
 
-> Woven Prompt 1.2（28）官方單檔 HTML。可由 GitHub Pages 線上開啟，也可下載成單一 HTML 離線保存。本發佈只包含 HTML 成品與公開維護文件，不包含 Mobile 原始碼、APK／AAB、簽章私鑰或個人 License。下載後可用 SHA-256 `77FC9EDAF66E04E76BD6400FCC9123ECA1B4940291215B7CB2BAFBAB71D31DAD` 驗證檔案。
+> Woven Prompt 2.1.0（44）官方單檔 HTML。可由 GitHub Pages 線上開啟，也可下載成單一 HTML 離線保存。本發佈只包含 HTML 成品與公開維護文件，不包含 Mobile 原始碼、APK／AAB、簽章私鑰或個人 License。下載後可用 SHA-256 `03BD1203B578A394B6DE24842B30A7C05E6C099E3A2E2E7BEB1AB2ED4531F91D` 驗證檔案。
 
 ## 1. 公開範圍
 
@@ -60,7 +60,7 @@ git log --oneline --left-right HEAD...origin/main
 
 Pages 已啟用，來源是 `main` 的 `/(root)`，正式入口為 [Woven Prompt HTML](https://sink6985757-web.github.io/WOVEN-HTML/)。推送 main 可能觸發 Pages build；每次同步後回讀 build 狀態、根入口連結與目前 HTML 下載的 SHA-256。GitHub commit 與 Pages 部署完成是兩項驗收。
 
-本輪只更新文件與同步既有 v28 成品，不變更 Pages 設定、權限或建立 Release。
+2026-09-06 更新範圍：加入 2.1.0（44）HTML、更新首頁與公開文件，沿用既有 main/root Pages；保留 v28／v25，不變更 Pages 設定、權限或建立 Release。
 
 ## 4. 發布新版本
 
@@ -80,7 +80,7 @@ Pages 已啟用，來源是 `main` 的 `/(root)`，正式入口為 [Woven Prompt
 ### 成品與敏感資訊
 
 ```powershell
-$html = '.\woven-prompt-mobile-1.2-v28.html'
+$html = '.\woven-prompt-mobile-2.1.0-v44.html'
 Get-Item -LiteralPath $html | Select-Object Name, Length, LastWriteTime
 Get-FileHash -Algorithm SHA256 -LiteralPath $html
 rg -n -i 'BEGIN .*PRIVATE KEY|sk-[A-Za-z0-9_-]{20,}|AIza[0-9A-Za-z_-]{30,}|gh[pousr]_[A-Za-z0-9]{20,}|Bearer\s+[A-Za-z0-9._~+/-]{20,}' -- $html

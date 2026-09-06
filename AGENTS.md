@@ -1,6 +1,6 @@
 # WOVEN-HTML
 
-Drive 公開成品 checkout 已快轉到 GitHub 的 1.2（28）；補齊 AGENTS、CHANGELOG、handoff 與 manual manifest，維持公開 HTML 成品邊界。
+目前公開成品為 2.1.0（44）；既有 v28／v25 完整保留。以獨立 Mobile 專案的相符來源產生經驗證的 HTML，維持公開成品與私有來源邊界。
 
 ## Portable lifecycle 維護契約
 
