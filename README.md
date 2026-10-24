@@ -13,3 +13,5 @@ Your Voice. Your Data. Your Workflow.
 [官方 YouTube 教學頻道](https://www.youtube.com/@WovenPrompt)。自備 Google Vertex API 為免費功能；Google 用量另計。永久去廣告與可選雲端訂閱分別提供，實際價格與版本供應以 Google Play 為準。
 
 本倉庫僅提供公開網站檔案。程式授權見 [LICENSE](LICENSE)，識別聲明見 [NOTICE](NOTICE)。
+
+官方圖示與排版校正：頁首、分頁與加入主畫面圖示取自正式 APP 品牌圖；實機截圖使用原像素無損 WebP 並保留比例，手機採清楚單欄呈現。
