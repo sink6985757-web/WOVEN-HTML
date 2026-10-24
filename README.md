@@ -2,6 +2,14 @@
 
 [開啟官方網站](https://sink6985757-web.github.io/WOVEN-HTML/) · [Google Play](https://play.google.com/store/apps/details?id=com.sink6985757.wovenprompt)
 
-Woven Prompt Android 語音鍵盤的產品介紹、使用指引與支援入口。
+Woven Prompt：個人語音與 Prompt 工作空間。
+
+Your Voice. Your Data. Your Workflow.
+
+你的語音、你的資料、你的工作流程。
+
+整合 Android 語音與打字鍵盤、Prompt、智能團與知識路由的產品介紹、實際介面、使用指引與支援入口。官網採日間視覺，介面截圖來自新版 Android APP（2.8.25／77）的實際日間模式。
+
+[官方 YouTube 教學頻道](https://www.youtube.com/@WovenPrompt)。自備 Google Vertex API 為免費功能；Google 用量另計。永久去廣告與可選雲端訂閱分別提供，實際價格與版本供應以 Google Play 為準。
 
 本倉庫僅提供公開網站檔案。程式授權見 [LICENSE](LICENSE)，識別聲明見 [NOTICE](NOTICE)。
