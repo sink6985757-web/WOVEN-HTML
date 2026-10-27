@@ -8,7 +8,7 @@ Android 用語音與打字鍵盤輸入；Windows v9.13.2 用快捷鍵口述、�
 
 Android 正式版由 Google Play 提供安裝與更新；商店顯示目前可用版本。Windows 完整安裝檔由本庫 Releases 提供，固定檔名 `WOVEN-Voice-Setup.exe`，附 SHA-256；此庫僅託管網站與已審核安裝產物，產品原始碼維持私人管理。安裝檔未數位簽章。手機購買方案目前尚不能直接帶到 Windows。
 
-免費離線口述；也可使用自己的 Google Vertex AI 金鑰（Google 用量另計）。手機版的永久去廣告與月訂閱可選購，內容及價格以 Google Play 為準。
+免費離線口述；也可使用自己的 Google Vertex AI 金鑰（Google 用量另計）。手機版可選購永久去廣告，內容及價格以 Google Play 為準。月訂閱已停止新購買，既有訂閱依有效期限使用。
 
 官網截圖為 Android 2.8.25／77 的實際日間畫面，最新版操作以安裝後為準。
 
